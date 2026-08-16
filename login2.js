@@ -5,7 +5,7 @@ function login() {
 
     // Send these values to the backend
 
-    fetch("http://localhost:3001/login",
+    fetch("/login", 
         {
         method: "POST",
 
