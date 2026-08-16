@@ -7,6 +7,11 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname));
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/login2.html");
+});
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -108,7 +113,9 @@ app.post("/signup",(req,res)=>
     });
 });
 
-app.listen(3001,()=>
+const PORT = process.env.PORT || 3001;
+
+app.listen(PORT, () =>
 {
-    console.log("Server Running on Port 3001");
+    console.log(`Server Running on Port ${PORT}`);
 });
