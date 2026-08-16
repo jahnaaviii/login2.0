@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff</title>
+</head>
+<body>
+
+    <h1>Welcome Staff</h1>
+    <h1 id="welcome"></h1>
+
+<script>
+    let userid = localStorage.getItem("userid");
+    document.getElementById("welcome").innerHTML = "Welcome " + userid;
+</script>
+
+</body>
+</html>
