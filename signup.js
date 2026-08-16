@@ -4,8 +4,7 @@ function signup()
     let userid = document.getElementById("userid").value;
     let password = document.getElementById("password").value;
 
-    fetch("http://localhost:3001/signup",
-    {
+fetch("/signup",    {
         method:"POST",
 
         headers:
